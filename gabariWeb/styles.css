@@ -1,0 +1,148 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    width: 60%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  /* Input section */
+  .input-section {
+    margin-bottom: 20px;
+  }
+  
+  #productCode {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  #findProduct {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Output section */
+  .output-section {
+    position: relative;
+  }
+
+  #render-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative; /* Ensure proper positioning */
+    width: fit-content; /* Ensure container fits content */
+  }
+  
+  #renderImage {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    display: none; /* Hide by default */
+    position: relative;
+    z-index: 1;
+  }
+  
+  #zones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .zone-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 50%;
+    pointer-events: auto;
+  }
+
+  .gabari-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: "100";
+    cursor: pointer;
+  }
+  .gabari-wrapper img {
+    width: 50px; /* Small size for display */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  
+  .gabari-point {
+    transition: transform 0.2s ease; /* Smooth animation for hover */
+    z-index: 100;
+    cursor: pointer;
+  }
+  
+  .gabari-point:hover {
+    transform: scale(1.5); /* Enlarge on hover */
+  }
+
+  .gabari-item {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 5px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .gabari-image {
+    display: block;
+    margin: 0 auto;
+    z-index: 5;
+  }
+  
+  .gabari-code {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .fullScreenOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fullScreenImage {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
